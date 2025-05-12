@@ -9,7 +9,7 @@ import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/lamborghini-revuelto-web-project">
   <div className="page-animations">
   <Routes>
     <Route path="/" element={<Home/>}/>
