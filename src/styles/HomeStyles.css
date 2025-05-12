@@ -40,7 +40,6 @@ div#hero {
     height: 800px;
     width: auto;
     background-size: cover;
-    margin-top: 70px;
     transition: background-image 1s ease-in-out;
 }
 

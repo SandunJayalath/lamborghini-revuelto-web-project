@@ -22,8 +22,14 @@
 }
 
 .navbar-toggler {
-  background-color: rgb(126, 124, 124);
-  border: 2px solid rgb(48, 48, 48)
+  background-color: rgba(245, 243, 243, 0);
+  border: none;
+  color: white;
+  padding: 0px;
+}
+
+.navbar-toggler-icon {
+  -webkit-text-fill-color: white;
 }
 
 .logo img{
@@ -63,7 +69,7 @@ h5#main-logo-text {
 }
 
 .nav-link {
-  color: rgb(240, 240, 240);
+  -webkit-text-fill-color: rgb(240, 240, 240);
   margin-right: 20px;
   border-radius: 30px;
   letter-spacing: 0.6px;
@@ -93,7 +99,7 @@ h5#main-logo-text {
 }
 
 .nav-link:hover {
-  color: rgb(131, 131, 131);
+  -webkit-text-fill-color: rgb(131, 131, 131);
 }
 
 .nav-item:hover .nav-underline{

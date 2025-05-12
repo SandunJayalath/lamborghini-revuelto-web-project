@@ -14,24 +14,36 @@ import { Quote } from 'lucide-react';
 
 // Importing the images
 import backgroundImage from '../assets/background-image.jpg';
+import image1 from '../assets/Gallery Images/Image1.jpg'
+import image2 from '../assets/Gallery Images/Image2.jpg'
+import image3 from '../assets/Gallery Images/Image3.jpg'
+import image4 from '../assets/Gallery Images/Image4.jpeg'
+import image5 from '../assets/Gallery Images/Image5.jpeg'
+import image6 from '../assets/Gallery Images/Image6.jpeg'
+import image7 from '../assets/Gallery Images/Image7.jpeg'
+import image8 from '../assets/Gallery Images/Image8.png'
+import image9 from '../assets/Gallery Images/Image9.jpg'
+import image10 from '../assets/Gallery Images/Image10.jpg'
+import image11 from '../assets/Gallery Images/Image11.png'
+import image12 from '../assets/Gallery Images/Image12.jpg'
 
 function GalleryPage () {
 
     const [theme, setTheme] = useState('light')
 
     const images = [
-        {id: 1, category: "Exterior", title: "lamborghini Rvuelto driving through", image: "./src/assets/Gallery Images/Image1.jpg"},
-        {id: 2, category: "Interior", title: "Awesome Driving Experience", image: "./src/assets/Gallery Images/Image2.jpg"},
-        {id: 3, category: "Life Styles", title: "Feeling The Luxuryness", image: "./src/assets/Gallery Images/Image3.jpg"},
-        {id: 4, category: "Performance", title: "Feel the Real Power of a Bull", image: "./src/assets/Gallery Images/Image4.jpeg"},
-        {id: 5, category: "Performance", title: "Awesome Suspensions and more", image: "./src/assets/Gallery Images/Image5.jpeg"},
-        {id: 6, category: "Interior", title: "Feel the Comfort and the Power", image: "./src/assets/Gallery Images/Image6.jpeg"},
-        {id: 7, category: "Details", title: "Feel The Real Neons", image: "./src/assets/Gallery Images/Image7.jpeg"},
-        {id: 8, category: "Interior", title: "Interior Cockpit, Feel Like a Pilot", image: "./src/assets/Gallery Images/Image8.png"},
-        {id: 9, category: "Life Styles", title: "Black Revuelto In The Dark Mode", image: "./src/assets/Gallery Images/Image9.jpg"},
-        {id: 10, category: "Exterior", title: "Revielto On The Runway", image: "./src/assets/Gallery Images/Image10.jpg"},
-        {id: 11, category: "Interior", title: "Digital Screens in The Cockpit", image: "./src/assets/Gallery Images/Image11.png"},
-        {id: 12, category: "Life Styles", title: "One of The Biggest Celebrations", image: "./src/assets/Gallery Images/Image12.jpg"},
+        {id: 1, category: "Exterior", title: "lamborghini Rvuelto driving through", image: image1},
+        {id: 2, category: "Interior", title: "Awesome Driving Experience", image: image2},
+        {id: 3, category: "Life Styles", title: "Feeling The Luxuryness", image: image3},
+        {id: 4, category: "Performance", title: "Feel the Real Power of a Bull", image: image4},
+        {id: 5, category: "Performance", title: "Awesome Suspensions and more", image: image5},
+        {id: 6, category: "Interior", title: "Feel the Comfort and the Power", image: image6},
+        {id: 7, category: "Details", title: "Feel The Real Neons", image: image7},
+        {id: 8, category: "Interior", title: "Interior Cockpit, Feel Like a Pilot", image: image8},
+        {id: 9, category: "Life Styles", title: "Black Revuelto In The Dark Mode", image: image9},
+        {id: 10, category: "Exterior", title: "Revielto On The Runway", image: image10},
+        {id: 11, category: "Interior", title: "Digital Screens in The Cockpit", image: image11},
+        {id: 12, category: "Life Styles", title: "One of The Biggest Celebrations", image: image12},
         
     ];
 

@@ -22,6 +22,25 @@ import { ChevronDown } from 'lucide-react';
 import { Quote } from 'lucide-react';
 
 // Importing the images
+import lamborghiniOrange from '../assets/Colors Changed Images/lamborghiniOrange.png'
+import neonGreen from '../assets/Colors Changed Images/neonGreen.png'
+import electricGreen from '../assets/Colors Changed Images/electricGreen.png'
+import signatureYellow from '../assets/Colors Changed Images/signatureYellow.png'
+import skyBlue from '../assets/Colors Changed Images/skyBlue.png'
+import tealBlue from '../assets/Colors Changed Images/tealBlue.png'
+import pearlPurple from '../assets/Colors Changed Images/pearlPurple.png'
+import glossyWhite from '../assets/Colors Changed Images/glossyWhite.png'
+import darkGray from '../assets/Colors Changed Images/darkGray.png'
+import lamborghiniBlack from '../assets/Colors Changed Images/lamborghiniBlack.png'
+import brightRed from '../assets/Colors Changed Images/brightRed.png'
+import babyBlue from '../assets/Colors Changed Images/babyBlue.png'
+import Altanero from '../assets/Colors Changed Images/Altanero.jpg'
+import Venacio from '../assets/Colors Changed Images/Venacio.jpg'
+import suedeInterior from '../assets/Colors Changed Images/suedeInterior.jpg'
+import leatherInterior from '../assets/Colors Changed Images/leatherInterior.jpg'
+import carbonInterior from '../assets/Colors Changed Images/carbonInterior.jpg'
+
+// Importing the images
 import backgroundImage from '../assets/2.jpeg';
 
 function DetailPage () {
@@ -51,7 +70,7 @@ function DetailPage () {
 
     // Color Changing & Image Changing Section
 
-    const [selectedCar, setSelectedCar] = useState("src/assets/Colors Changed Images/lamborghiniOrange.png");
+    const [selectedCar, setSelectedCar] = useState({lamborghiniOrange});
     const [loading, setLoading] = useState(false);
 
     const handelColorChange = (src) => {
@@ -176,18 +195,18 @@ function DetailPage () {
                 <div className='mb-3' style={{width: "80%", height: "2px", backgroundColor: "rgb(155, 153, 153)"}}></div>
                 <div className='d-flex justify-content-center' style={{width: "100%"}}>
                 <div className="d-flex gap-1 gap-lg-2 gap-xl-2 gap-md-2 gap-sm-1 justify-content-center align-items-center mb-5 mt-3 color-circles-container">
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/lamborghiniOrange.png")} className='color-circles' style={{backgroundColor: " #FF5C00"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/neonGreen.png")} className='color-circles' style={{backgroundColor: " #00FF00"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/electricGreen.png")} className='color-circles' style={{backgroundColor: " #6DF52E"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/signatureYellow.png")} className='color-circles' style={{backgroundColor: "#FFD700"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/skyBlue.png")} className='color-circles' style={{backgroundColor: "#3A5BA0"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/tealBlue.png")} className='color-circles' style={{backgroundColor: "#008CBA"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/pearlPurple.png")} className='color-circles' style={{backgroundColor: "#800080"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/glossyWhite.png")} className='color-circles' style={{backgroundColor: "#F2F2F2"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/darkGray.png")} className='color-circles' style={{backgroundColor: "#4B4B4B"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/lamborghiniBlack.png")} className='color-circles' style={{backgroundColor: "#1A1A1A"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/brightRed.png")} className='color-circles' style={{backgroundColor: "#FF0000"}}></div>
-                    <div onClick={() => handelColorChange("./src/assets/Colors Changed Images/babyBlue.png")} className='color-circles' style={{backgroundColor: "#8FD8F8"}}></div>
+                    <div onClick={() => handelColorChange(lamborghiniOrange)} className='color-circles' style={{backgroundColor: " #FF5C00"}}></div>
+                    <div onClick={() => handelColorChange(neonGreen)} className='color-circles' style={{backgroundColor: " #00FF00"}}></div>
+                    <div onClick={() => handelColorChange(electricGreen)} className='color-circles' style={{backgroundColor: " #6DF52E"}}></div>
+                    <div onClick={() => handelColorChange(signatureYellow)} className='color-circles' style={{backgroundColor: "#FFD700"}}></div>
+                    <div onClick={() => handelColorChange(skyBlue)} className='color-circles' style={{backgroundColor: "#3A5BA0"}}></div>
+                    <div onClick={() => handelColorChange(tealBlue)} className='color-circles' style={{backgroundColor: "#008CBA"}}></div>
+                    <div onClick={() => handelColorChange(pearlPurple)} className='color-circles' style={{backgroundColor: "#800080"}}></div>
+                    <div onClick={() => handelColorChange(glossyWhite)} className='color-circles' style={{backgroundColor: "#F2F2F2"}}></div>
+                    <div onClick={() => handelColorChange(darkGray)} className='color-circles' style={{backgroundColor: "#4B4B4B"}}></div>
+                    <div onClick={() => handelColorChange(lamborghiniBlack)} className='color-circles' style={{backgroundColor: "#1A1A1A"}}></div>
+                    <div onClick={() => handelColorChange(brightRed)} className='color-circles' style={{backgroundColor: "#FF0000"}}></div>
+                    <div onClick={() => handelColorChange(babyBlue)} className='color-circles' style={{backgroundColor: "#8FD8F8"}}></div>
                 </div>
                 </div>
 
@@ -198,11 +217,11 @@ function DetailPage () {
                         <button className="dropdown-btn">{rimText}<ChevronDown/></button>
                     <div className="dropdown-content">
                         <a onClick={() => {
-                            handelColorChange("./src/assets/Colors Changed Images/Altanero.jpg");
+                            handelColorChange(Altanero);
                             setRimText("Altanero");}}>Altanero</a>
                         
                         <a onClick={() => {
-                            handelColorChange("./src/assets/Colors Changed Images/Venacio.jpg");
+                            handelColorChange(Venacio);
                             setRimText("Venacio")}}>Venacio</a>
                     </div>
                     </div> 
@@ -211,13 +230,13 @@ function DetailPage () {
                         <button className="dropdown-btn">{intrText}<ChevronDown/></button>
                     <div className="dropdown-content">
                         <a onClick={() => {
-                            handelColorChange("./src/assets/Colors Changed Images/suedeInterior.jpg");
+                            handelColorChange(suedeInterior);
                             setIntrText("Suede") }}>Suede</a>
                         <a onClick={() =>{ 
-                            handelColorChange("./src/assets/Colors Changed Images/leatherInterior.jpg");
+                            handelColorChange(leatherInterior);
                             setIntrText("Leather")}}>Leather</a>
                         <a onClick={() => {
-                            handelColorChange("./src/assets/Colors Changed Images/carbonInterior.jpg");
+                            handelColorChange(carbonInterior);
                             setIntrText("Exposed Carbon")}}>Exposed Carbon</a>
                     </div>
                     </div>

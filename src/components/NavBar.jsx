@@ -4,6 +4,7 @@ import { CloudSun } from 'lucide-react';
 import { ChevronDown } from 'lucide-react';
 import { CircleX } from 'lucide-react';
 import { X } from 'lucide-react';
+import { AlignJustify } from 'lucide-react';
 import { useState } from 'react'
 
 import logo from '../assets/main-logo.png';
@@ -28,7 +29,7 @@ function NavBar ({toggleTheme, currentTheme}) {
             </Link>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"><AlignJustify style={{width:"30px", height: "30px"}}/></span>
             </button>
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
