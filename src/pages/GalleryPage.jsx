@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 // Importing the Components
 import NavBar from "../components/NavBar"
@@ -10,6 +11,9 @@ import NormalButton from "../components/NormalButton";
 import TheFooter from "../components/TheFooter";
 
 import { Quote } from 'lucide-react';
+
+// Importing the images
+import backgroundImage from '../assets/background-image.jpg';
 
 function GalleryPage () {
 
@@ -50,7 +54,7 @@ function GalleryPage () {
         <NavBar toggleTheme={toggleTheme} currentTheme={theme}/>
         
         <SubHero 
-            backgroundImage="./src/assets/background-image.jpg"
+            backgroundImage={backgroundImage}
             heading="Revuelto Gallery"
             paragraph="Explore the artistry, the innovation, and the adrenaline in stunning detail. The Revuelto comes alive through the lens."
             button="Download Media Kit"
@@ -76,8 +80,8 @@ function GalleryPage () {
             </div>
         </div>
         <div id="download" className="d-flex justify-content-center">
-            <a href="./src/assets/GalleryImages.zip" download>
-                <NormalButton text="Download Full Image Pack"/>
+            <a href="/GalleryImages.zip" download>
+                <button className="normal-button">Download Full Image Pack</button>
             </a>
         </div>
 

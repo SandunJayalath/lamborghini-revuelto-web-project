@@ -1,5 +1,6 @@
 import { Linkedin } from 'lucide-react';
 import { CircleSmall } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function TeamCard (props) {
     return (
@@ -17,9 +18,9 @@ function TeamCard (props) {
                 </div>
                 <h6>{props.location}</h6>
                 <h6 style={{color: "rgb(248, 240, 196)", fontWeight: "bold"}}>{props.badge}</h6>
-                <a href={props.linkedinLink} className="linkedin-link">
+                <Link to={props.linkedinLink} className="linkedin-link">
                     <Linkedin className='linkedin'/>
-                </a>
+                </Link>
             </div>
             </div>
         </>

@@ -21,6 +21,9 @@ import { Cog } from 'lucide-react';
 import { ChevronDown } from 'lucide-react';
 import { Quote } from 'lucide-react';
 
+// Importing the images
+import backgroundImage from '../assets/2.jpeg';
+
 function DetailPage () {
 
     const [theme, setTheme] = useState('light')
@@ -97,7 +100,7 @@ function DetailPage () {
         <NavBar toggleTheme={toggleTheme} currentTheme={theme}/>
         
         <SubHero 
-            backgroundImage="./src/assets/2.jpeg"
+            backgroundImage={backgroundImage}
             heading="Unleash the Power of Precision"
             paragraph="Experience the perfect blend of performance, design, and innovation. Dive into the details of your dream ride — crafted to turn heads and built to dominate every road."
             button="Explore Our Legacy"/>

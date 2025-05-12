@@ -6,6 +6,8 @@ import { CircleX } from 'lucide-react';
 import { X } from 'lucide-react';
 import { useState } from 'react'
 
+import logo from '../assets/main-logo.png';
+
 // Importing The Components
 import ReserveBox from './ReserveBox';
 
@@ -21,7 +23,7 @@ function NavBar ({toggleTheme, currentTheme}) {
         <nav className="navbar navbar-expand-lg">
         <div className="container">
             <Link className="d-flex logo align-items-center justify-content-center"  to="/">
-                <img src="./src/assets/main-Logo.png" alt="logo" />
+                <img src={logo} alt="logo" />
                 <h5 id="main-logo-text"><strong><div className='lambo'>Lamborghini</div></strong> Revuelto</h5>
             </Link>
 

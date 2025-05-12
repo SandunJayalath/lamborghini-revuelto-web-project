@@ -8,6 +8,9 @@ import { Twitter } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 
+// Importing the images
+import logo from '../assets/main-logo.png';
+
 function TheFooter () {
 
     const [isCookyPolicyBoxOpen, setIsCookyPolicyBoxOpen] = useState(false);
@@ -26,7 +29,7 @@ function TheFooter () {
                 <div className="row d-flex  justify-content-center align-items-center">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex justify-content-center align-items-center text-center mt-sm-5 mt-md-0 mt-lg-0 mt-xl-0 mt-5" style={{flexDirection: "column"}}>
                     <Link className="" to="/" onClick={() => {navigate("/");}} style={{color: "white", textDecoration: "none", fontWeight: "bold"}}>
-                        <img src="./src/assets/main-logo.png" width="100" height="auto" alt="Logo"/>
+                        <img src={logo} width="100" height="auto" alt="Logo"/>
                         <h4 style={{textDecoration: "none", marginBottom: "20px"}}>Lamborghini Revuelto</h4>
                     </Link>
                     <p>The Lamborghini Revuelto is our boldest step into performance-driven electrification.</p>
@@ -35,22 +38,22 @@ function TheFooter () {
                         <ul type="none" style={{textAlign: "left", margin: "0px"}}>
                             <h4><storng>Explore</storng></h4>
                             <li >
-                                <a className="footer-link" aria-current="page" href="/">Home</a>
+                                <Link className="footer-link" aria-current="page" to="/">Home</Link>
                             </li>
                             <li >
-                                <a className="footer-link" aria-current="page" href="/AboutPage">About</a>
+                                <Link className="footer-link" aria-current="page" to="/AboutPage">About</Link>
                             </li>
                             <li >
-                                <a className="footer-link" aria-current="page" href="/DetailPage">Car Details</a>
+                                <Link className="footer-link" aria-current="page" to="/DetailPage">Car Details</Link>
                             </li>
                             <li >
-                                <a className="footer-link" aria-current="page" href="/GalleryPage">Gallery</a>
+                                <Link className="footer-link" aria-current="page" to="/GalleryPage">Gallery</Link>
                             </li>
                             <li >
-                                <a className="footer-link" aria-current="page" href="/ContactPage">Contact Us</a>
+                                <Link className="footer-link" aria-current="page" to="/ContactPage">Contact Us</Link>
                             </li>
                             <li >
-                                <a onClick={() => setIsTermBoxOpen(true)} className="footer-link" aria-current="page" style={{cursor: "pointer"}}>Terms and Condition</a>
+                                <Link onClick={() => setIsTermBoxOpen(true)} className="footer-link" aria-current="page" style={{cursor: "pointer"}}>Terms and Condition</Link>
                             </li>
                         </ul>
 
@@ -107,21 +110,21 @@ function TheFooter () {
                             </li>
                             <li >
                             <div className="d-flex gap-lg-4 gap-md-4 gap-1 justify-content-flex-start mt-3" style={{width: "100%"}}>
-                                <a href="" className='social-media-icons'>
+                                <Link to="" className='social-media-icons'>
                                     <Instagram size="30px" style={{color: "rgb(255, 255, 255)", margin: "10px"}}/>                            
-                                </a>
+                                </Link>
                                 
-                                <a href="" className='social-media-icons'>
+                                <Link to="" className='social-media-icons'>
                                     <Twitter size="30px" style={{color: "rgb(255, 255, 255)", margin: "10px"}}/>
-                                </a>
+                                </Link>
                                 
-                                <a href="" className='social-media-icons'>
+                                <Link to="" className='social-media-icons'>
                                     <Linkedin  size="30px" style={{color: "rgb(255, 255, 255)", margin: "10px"}}/>
-                                </a>
+                                </Link>
                                 
-                                <a href="" className='social-media-icons'>
+                                <Link to="" className='social-media-icons'>
                                     <Facebook  size="30px" style={{color: "rgb(255, 255, 255)", margin: "10px"}}/>
-                                </a>
+                                </Link>
                             </div>  
                             </li>
                         </ul>

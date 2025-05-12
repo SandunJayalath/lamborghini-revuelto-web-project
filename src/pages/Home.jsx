@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from 'react-router-dom';
 
 // Importing the Components
 import NavBar from "../components/NavBar";
@@ -15,14 +16,21 @@ import { SprayCan } from 'lucide-react';
 import { Headset } from 'lucide-react';
 import { PencilRuler } from 'lucide-react';
 
+// Importing the images
+import img1 from '../assets/1.jpg';
+import img2 from '../assets/2.jpeg';
+import img3 from '../assets/3.jpeg';
+import img4 from '../assets/4.jpg';
+import revueltoCar from '../assets/transparent_car.png';
+
 function Home () {
 
     // For the Header Image
     const backgroundImages = [
-        "url('./src/assets/1.jpg')",
-        "url('./src/assets/2.jpeg')",
-        "url('./src/assets/3.jpeg')",
-        "url('./src/assets/4.jpg')"
+        `url(${img1})`,
+        `url(${img2})`,
+        `url(${img3})`,
+        `url(${img4})`,
     ]
 
     const [index, setIndex] = useState(0);
@@ -100,12 +108,12 @@ function Home () {
                 <h1>Lamborghini Revuelto</h1>
                 <h3>Unleash the Future of Power.</h3>
                 <div className="d-flex gap-4 mt-3 cta-buttons">
-                    <a href="./GalleryPage">
+                    <Link to="/GalleryPage">
                         <button>Check Gallery</button>
-                    </a>
-                    <a href="./DetailPage">
+                    </Link>
+                    <Link to="/DetailPage">
                         <button>Explore Features</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="d-flex justify-content-center align-items-center hero-card-container" style={{position: "absolute", bottom: "40px"}}>
@@ -173,9 +181,9 @@ function Home () {
             <div className="row d-flex justify-content-center" style={{marginTop: "40px", width: "100%"}}>
                
                 <div ref={domRef2} className={`from-left ${isVisible2 ? 'visible' : ''} col-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center`} id="image-next-texts" style={{position: "relative"}}>
-                        <img src="./src/assets/transparent_Car.png" alt="" style={{width: "80%", height :"auto"}}/>
+                        <img src={revueltoCar} alt="" style={{width: "80%", height :"auto"}}/>
                     <span id="tooltip-section">
-                        <a href="/DetailPage#customize-section"><div className="customize-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><PencilRuler className="pencil-icon"/></div></a>
+                        <Link to="/DetailPage#customize-section"><div className="customize-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><PencilRuler className="pencil-icon"/></div></Link>
                         <span id="tooltip-text">Customize your Revuelto</span>
                     </span>
                 </div>
@@ -253,15 +261,15 @@ function Home () {
                     </div>
                 </div>              
                 <div className="col-12 col-md-12 col-lg-6 col-xl-6 d-flex gap-2 d-flex justify-content-center align-items-center">
-                    <a className=" d-flex text-center" id="cta-anchor-tags" href="./DetailPage">
+                    <Link className=" d-flex text-center" id="cta-anchor-tags" to="/DetailPage">
                         <SprayCan style={{width: "100px", height: "auto"}}/>
                         <h4 className="fs-lg-1 fs-xl-1 fs-6"><strong>Explore The Full Specs</strong></h4>
-                    </a>
+                    </Link>
                     <div className="row" style={{width: "5px", height: "100px", backgroundColor: "rgb(63, 63, 63)"}}></div>
-                    <a id="cta-anchor-tags" className="d-flex text-center" href="./ContactPage">
+                    <Link id="cta-anchor-tags" className="d-flex text-center" tp="/ContactPage">
                         <Headset style={{width: "100px", height: "auto"}}/>
                         <h4 className="fs-lg-1  fs-6"><strong>Contact Us</strong></h4>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>        

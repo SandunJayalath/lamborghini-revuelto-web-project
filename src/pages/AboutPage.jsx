@@ -16,6 +16,15 @@ import { AudioWaveform } from 'lucide-react';
 import { Framer } from 'lucide-react';
 import { Quote } from 'lucide-react';
 
+//Importing the images
+import backgroundImage from '../assets/3.jpeg';
+import Alessio from '../assets/Alessio Romano.png';
+import Mia from '../assets/Mia Tanaka.jpg';
+import Leonardo from '../assets/Leonardo Bianchi.png';
+import Amara from '../assets/Amara Collins.png';
+import Luca from '../assets/Luca Ferrero.jpg';
+import Sophia from '../assets/Sophia Riedel.jpg';
+
 function AboutPage() {
 
     // Switching the Themes
@@ -34,7 +43,7 @@ function AboutPage() {
         <NavBar toggleTheme={toggleTheme} currentTheme={theme}/>
         
         <SubHero 
-            backgroundImage="./src/assets/3.jpeg"
+            backgroundImage={backgroundImage}
             heading="Crafted with Purpose. Designed for the Future."
             paragraph="Discover the story, vision, and legacy behind the Lamborghini Revuelto — where iconic design meets hybrid innovation."
             button="Explore Our Masterpiece"
@@ -173,7 +182,7 @@ function AboutPage() {
             
             <div className="d-flex align-items-center scrollable-container p-4" style={{width: "100%", overflowX: "auto", justifyContent: "flex-start", flex: "0 0 auto"}}>
                 <TeamCard 
-                    image="./src/assets/Alessio Romano.png"
+                    image={Alessio}
                     name="Alessio Romano"
                     role="Chief Design Officer"
                     bio="Visionary behind Revuelto’s aerodynamic silhouette and aggressive stance."
@@ -182,7 +191,7 @@ function AboutPage() {
                     linkedinLink=""/>
 
                 <TeamCard 
-                    image="./src/assets/Mia Tanaka.jpg"
+                    image={Mia}
                     name="Mia Tanaka"
                     role="Lead AI Systems Engineer"
                     bio="Developed the adaptive AI that powers Revuelto’s intelligent Track Mode."
@@ -191,7 +200,7 @@ function AboutPage() {
                     linkedinLink=""/>
                 
                 <TeamCard 
-                    image="./src/assets/Leonardo Bianchi.png"
+                    image={Leonardo}
                     name="Leonardo Bianchi"
                     role="Hybrid Powertrain Architect"
                     bio="Engineered the seamless blend of electric torque and V12 combustion."
@@ -200,7 +209,7 @@ function AboutPage() {
                     linkedinLink=""/>
 
                 <TeamCard 
-                    image="./src/assets/Amara Collins.png"
+                    image={Amara}
                     name="Amara Collins"
                     role="Carbon Materials Specialist"
                     bio=" Pioneered Revuelto’s carbon-fiber chassis for ultra-light performance."
@@ -210,7 +219,7 @@ function AboutPage() {
 
 
                 <TeamCard 
-                    image="./src/assets/Luca Ferrero.jpg"
+                    image={Luca}
                     name="Luca Ferrero"
                     role=" Interior UX Designer"
                     bio="Created the digital cockpit experience, merging beauty with performance data."
@@ -219,7 +228,7 @@ function AboutPage() {
                     linkedinLink=""/>
 
                 <TeamCard 
-                    image="./src/assets/Sophia Riedel.jpg"
+                    image={Sophia}
                     name="Sophia Riedel"
                     role="Suspension & Dynamics Engineer"
                     bio="Designed the adaptive suspension system for any road, any speed."

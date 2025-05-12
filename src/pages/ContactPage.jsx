@@ -20,6 +20,10 @@ import { CircleX } from 'lucide-react';
 import { X } from 'lucide-react';
 import { ChevronLeft } from 'lucide-react';
 
+// Importing the images
+import backgroundImage from '../assets/4.jpg';
+import lamboLogo from '../assets/lambo-logo.png';
+
 function ContactPage() {
 
     const [theme, setTheme] = useState('light')
@@ -66,7 +70,7 @@ function ContactPage() {
         <NavBar toggleTheme={toggleTheme} currentTheme={theme} />
 
         <SubHero
-            backgroundImage="./src/assets/4.jpg"
+            backgroundImage={backgroundImage}
             heading="Get in Touch with Us"
             paragraph="Have questions or ready to schedule a test drive? We’re here to assist you."
             button="Send Message" 
@@ -179,7 +183,7 @@ function ContactPage() {
             <div className="row d-flex justify-content-center mt-5 mb-5">
                 <div className="col-12 col-ld-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center lambo-logo">
                     <h1>✅</h1>
-                    <img src="./src/assets/lambo-logo.png" alt=""/>
+                    <img src={lamboLogo} alt=""/>
                 </div>
                 <div className="col-12 col-ld-6 col-lg-6 col-xl-6 ps-5 pe-5 d-flex justify-content-center align-items-start gap-4 mt-md-4 mt-sm-4 mt-4 mt-lg-0 mt-xl-0" style={{flexDirection: "column"}}>
                     <h3 className="topic" style={{margin: "0px", fontFamily: "Montserrat", fontWeight: "bold", fontSize: "25px", color: "var(--text-color)", textAlign: "center"}}>Ready to Ignite the Road?</h3>
