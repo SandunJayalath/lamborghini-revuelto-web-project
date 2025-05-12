@@ -1,0 +1,51 @@
+.profile-image {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+
+div#team-card {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    min-height: 550px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+div#team-card:hover {
+    background-color: rgb(29, 29, 29);
+    box-shadow: 0 0 20px rgb(3, 121, 231);
+}
+
+.team-card-body {
+    width: 100%;
+    padding: 0px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.team-card-body h6{
+    font-family: Tilt Neon, sans-serif;
+    color: rgb(240, 240, 240);
+}
+
+.team-card-body p{
+    color: rgb(173, 173, 173);
+}
+
+.linkedin-link {
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+
+.linkedin {
+    color: rgb(7, 169, 233);
+    width: 30px;
+    height: auto;
+    transition: 0.3s;
+}
+
+.linkedin:hover {
+    color: rgb(7, 79, 233);
+}

@@ -1,0 +1,47 @@
+::selection {
+  background-color: orange;
+  color: #111111;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --paragraph-color: rgb(32, 32, 32);
+  --cta-anchor-tags: rgb(10, 11, 41);
+}
+
+[data-theme="dark"] {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --paragraph-color: rgb(179, 176, 176);
+  --cta-anchor-tags: rgb(201, 201, 201);
+}
+
+html {
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3 ease-in-out;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.page-animations {
+  animation: fadeInPage 0.3s forwards ease-in-out;
+  transition: 0.3s;
+}
+
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

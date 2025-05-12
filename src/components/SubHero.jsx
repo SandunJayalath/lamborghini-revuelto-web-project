@@ -1,0 +1,26 @@
+
+function SubHero({backgroundImage, heading, paragraph, button, buttonPath}) {
+
+    const imageStyles = {
+        backgroundImage: `url(${backgroundImage})`,
+    }
+
+    return (
+        <>
+        <div className="container-fluid sub-hero" style={imageStyles}>
+            <div className="container-lg p-4">
+            <div className="d-flex align-items-left sub-her-content" style={{flexDirection: "column"}}>
+                <h1>{heading}</h1>
+                <h4>{paragraph}</h4>
+                <div className="d-flex gap-4 cta-buttons">
+                    <a href={buttonPath}>
+                        <button>{button}</button>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </>
+    );
+}
+export default SubHero;

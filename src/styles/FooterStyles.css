@@ -1,0 +1,127 @@
+
+div#the-footer {
+    background: linear-gradient(to right,#00142b, #033af0, #000000);
+    background-size: 600% 600%;
+    min-height: 400px;
+    position: sticky;
+    color: white;
+    animation: changing-color 5s infinite ease;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.wave-top svg {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: -1px; /* Removes any unwanted space */
+    fill: rgb(8, 5, 56)
+}
+
+div#the-footer p{
+    color: rgb(185, 185, 185);
+    font-family: Tilt Neon, sans-serif, Arial;
+}
+
+@keyframes changing-color {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.footer-link {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    line-height: 35px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: rgb(98, 131, 158);
+}
+
+.policy-window {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    width: 80vw;
+    max-width: 1200px;
+    max-height: 80vh;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.897); /* dark background */
+    z-index: 9999;
+    border-radius: 10px;
+    overflow: auto;
+    opacity: 0;
+    animation: fadeInContent 0.5s forwards;
+    overflow-y: auto;
+}
+
+.policy-window::-webkit-scrollbar {
+    background-color: #505050;
+    width: 10px;
+    border-radius: 30px;
+}
+
+.policy-window::-webkit-scrollbar-thumb {
+    background-color: rgb(168, 168, 168);
+    border-radius: 30px;
+}
+
+@keyframes fadeInContent {
+    0% {
+      transform: scale(0.9), translate(-50%, -50%); 
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1), translate(-50%, -50%); 
+      opacity: 1; 
+    }
+  }
+
+.policy-content {
+    color: white;
+    padding: 20px 20px;
+}
+
+.policy-content h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.policy-content h6{
+    margin-top: 30px;
+    color: rgb(212, 212, 212);
+}
+
+.policy-content h5{
+    margin-top: 30px;
+}
+
+.policy-content ul{
+    margin: 20px 0px;
+}
+
+@media (max-width: 900px) {
+    .policy-window  {
+        width: 96%;
+        justify-content: flex-start;
+    }
+    .term-condition-content {
+        padding-top: 2000px;
+    }
+}

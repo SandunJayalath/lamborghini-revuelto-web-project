@@ -1,0 +1,460 @@
+/* Creating The Fade in Animation for The Pages */
+div#root {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes pageAnime {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Styles for the hero section */
+
+div#hero {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.432);
+    background-blend-mode: multiply;
+    height: 800px;
+    width: auto;
+    background-size: cover;
+    margin-top: 70px;
+    transition: background-image 1s ease-in-out;
+}
+
+div#hero h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    font-family: Inter, Helvetica, sans-serif ;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(223, 155, 30);
+    text-align: center;
+    animation: header-topic 2s infinite ease-in-out;
+}
+
+@keyframes header-topic {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+}
+
+div#hero h3 {
+    color: rgb(212, 212, 212);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width: 700px) {
+    div#hero h1 {
+        font-size: 50px;
+        line-height: 80px;
+    }
+}
+
+.cta-buttons button{
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    background-image: linear-gradient(to right, rgb(12, 67, 248), rgb(78, 39, 255));
+    border: 2px solid rgb(54, 54, 54);
+    transition: 0.3s;
+    color: white;
+}
+.cta-buttons button:hover{
+    background-image: linear-gradient(to bottom, rgb(203, 236, 234), rgb(203, 236, 234));
+    color: black;
+    border-color: rgb(0, 81, 255);
+}
+
+.hero-card-container {
+    gap: 25px;
+}
+
+div#card {
+    max-width: 400px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.26);
+    transition: 0.3s;
+    color: rgb(27, 27, 27);
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+    padding: 0px 10px;
+}
+div#card h4 {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+div#card:hover {
+    background-color: rgba(252, 252, 252, 0.596);
+}
+
+@media (max-width: 800px) {
+    div#hero {
+        height: 700px;
+    }
+    .hero-card-container {
+        gap: 0px;
+        padding: 2px 2px;
+    }
+    div#card{
+        margin: 5px;
+        padding: 10px 5px;
+        max-height: 500px;
+    }
+    div#card h4, h5 {
+        font-size: 16px;
+    }
+    .cta-buttons button{
+        font-size: 16px;
+    }
+}
+
+/* Styles of Fade in from Both Sides */
+
+.from-left {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.from-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.from-right {
+    opacity: 0;
+    transform: translateX(90px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Styles of the main topic component */
+
+.main-topic {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    font-size: 30px;
+    margin: 30px 0px;
+}
+.main-topic.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.paragraphs {
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .main-topic {
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+}
+
+/* Scroll Joining Effect Styles */
+
+.scroll-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  transition: gap 0.6s ease;
+}
+
+.scroll-section.animate {
+  gap: 20px;
+}
+
+/* Key Feature Card Styles */
+
+.key-feature-card {
+    flex-direction: column;
+    background-color: rgba(167, 243, 183, 0.9);
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+.key-feature-card:hover {
+    background-color: rgb(105, 207, 127);
+    transform: scale(1.02);
+}
+
+.key-feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 970px) {
+div#image-next-texts {
+    margin-bottom: 40px;
+}   
+}
+
+/* Button Styles */
+
+.normal-button {
+    background-image: linear-gradient(to right, rgb(0, 62, 197), rgb(3, 147, 214));
+    padding: 5px 20px;
+    font-weight: bold;
+    color: white;
+    max-width: 300px;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.normal-button:hover {
+    background-image: linear-gradient(to right, rgb(22, 22, 22), rgb(22, 22, 22));
+    border-color: rgb(24, 137, 243);
+}
+
+/* Styling the Customization icon */
+
+.customize-icon {
+    position: absolute;
+    background-color: rgb(39, 39, 39);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 100px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgba(94, 91, 91, 0.671);
+    transition: 0.3s;
+    animation: popUp 2s infinite ease-in-out;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    10% {
+        transform: scale(1.0);
+    }
+}
+
+.customize-icon:hover {
+    border: 2px solid rgba(0, 0, 0, 0.692);
+    transform: scale(1.09);
+}
+
+@media (max-width: 900px) {
+    .customize-icon {
+        bottom: 60px;
+        right: 0px;
+    }
+}
+
+span#tooltip-section {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+span#tooltip-text {
+    position: absolute;
+    visibility: hidden;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    bottom: 140px;
+    right: 30px;
+    background-color: rgb(43, 42, 42);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+span#tooltip-section:hover span#tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mini Gallery Container Styles */
+
+.scrollable-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+div#mini-gallery-card {
+    flex-direction: column;
+    max-width: 300px;
+    min-height: 400px;
+    background-color: #2b2b2b;
+    border: 2px solid rgb(128, 125, 125);
+    border-radius: 10px;
+    transition: 0.3s;
+    -webkit-text-fill-color: white;
+}
+div#mini-gallery-card:hover {
+    transform: scale(1.01);
+    background-color: #1a1a1a;
+}
+div#gallery-card-alignment {
+    justify-content: flex-start;
+}
+
+.mini-gallery-body h6{
+    -webkit-text-fill-color: #cacaca;
+    font-weight: none;
+    font-family: Arial;
+}
+
+@media (max-width: 1700px) {
+    div#gallery-card-alignment {
+        justify-content: flex-start;
+    }
+}
+
+.scrollable-container::-webkit-scrollbar {
+    height: 9px;
+    background-color: #100d3a;
+    border-radius: 20px;
+}
+.scrollable-container::-webkit-scrollbar-thumb {
+    background: rgb(41, 130, 212);
+    border-radius: 20px;
+}
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 73, 128);
+}
+
+.view-more-box {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 12%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.932);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    height: 900px;
+    transition: 0.3;
+    opacity: 0;
+    animation: fadeInContent 0.5s forwards;
+}
+
+@keyframes fadeInContent {
+    0% {
+      transform: scale(0.9); /* Start smaller */
+      opacity: 0; /* Start invisible */
+    }
+    100% {
+      transform: scale(1); /* End at normal size */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+
+@media (min-width: 1300px) {
+    .view-more-box {
+        padding: 0px 200px;
+    }
+}
+
+.view-more-box img{
+    max-width: 700px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.view-more-box h2{
+    color: white;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.view-more-box h5{
+    color: rgb(153, 153, 153);
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    padding: 0px 30px;
+}
+
+@media (max-width: 700px) {
+    .view-more-box h5{
+        margin-top: 10px;
+        width: 110%;
+    }
+    .view-more-box {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3423223;
+        padding: 0px;
+    }
+    .view-more-box img{
+        max-width: 700px;
+        width: 90%;
+    }
+}
+
+/* CTA | Latest Section */
+
+a#cta-anchor-tags {
+    flex: 0 0 50%;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cta-anchor-tags);
+    transition: 0.3s;
+}
+a#cta-anchor-tags:hover {
+    transform: scale(1.03);
+}
