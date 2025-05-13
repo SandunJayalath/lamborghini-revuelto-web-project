@@ -123,7 +123,7 @@ function AboutPage() {
             </div>
 
             <div className="mt-4 text-center">
-                <NormalButton text="Discover The Power" path="./Detailpage"/>
+                <NormalButton text="Discover The Power" path="/Detailpage"/>
             </div>
 
             </div>
@@ -169,7 +169,7 @@ function AboutPage() {
             </div>
             </div>
             <div className="mt-4 text-center">
-                <NormalButton text="Explore the Tech Specs" path="./DetailPage"/>
+                <NormalButton text="Explore the Tech Specs" path="/DetailPage"/>
             </div>
 
             </div>

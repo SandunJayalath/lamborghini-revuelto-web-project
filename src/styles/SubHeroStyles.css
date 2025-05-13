@@ -7,7 +7,6 @@
     background-position: center;
     background-color: rgba(0, 0, 0, 0.61);
     background-blend-mode: multiply;
-    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +35,6 @@
 
 @media (max-width: 900px) {
     .sub-hero {
-        margin-top: 60px;
         height: 500px;
     }
 }

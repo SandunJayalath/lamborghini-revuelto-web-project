@@ -411,7 +411,7 @@ function DetailPage () {
         </div>
 
         <div className="mt-4 text-center">
-            <NormalButton text="Learn How It Is Made" path="./AboutPage"/>
+            <NormalButton text="Learn How It Is Made" path="/AboutPage"/>
         </div>
 
         <div className="container d-flex justify-content-center align-items-center">

@@ -3,18 +3,18 @@
   color: #111111;
 }
 
-:root {
+:root{
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --bg-color: #ffffff;
-  --text-color: #111111;
+  --bg-color: #ffffff !important;
+  --text-color: #111111 !important;
   --paragraph-color: rgb(32, 32, 32);
   --cta-anchor-tags: rgb(10, 11, 41);
 }
 
-[data-theme="dark"] {
-  --bg-color: #111111;
-  --text-color: #ffffff;
-  --paragraph-color: rgb(179, 176, 176);
+:root[data-theme="dark"] {
+  --bg-color: #111111 !important;
+  --text-color: #ffffff !important;
+  --paragraph-color: rgb(179, 176, 176) !important;
   --cta-anchor-tags: rgb(201, 201, 201);
 }
 
