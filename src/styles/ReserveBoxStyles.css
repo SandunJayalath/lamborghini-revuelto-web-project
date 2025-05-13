@@ -99,7 +99,6 @@ div#successful-message-box {
     max-width: 600px;
     width: 100%;
     transform: translateX(-50%);
-    height: 300px;
     z-index: 200000;
     justify-content: center;
     padding: 10px 10px;
