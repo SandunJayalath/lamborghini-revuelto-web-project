@@ -70,7 +70,7 @@ function DetailPage () {
 
     // Color Changing & Image Changing Section
 
-    const [selectedCar, setSelectedCar] = useState({lamborghiniOrange});
+    const [selectedCar, setSelectedCar] = useState(lamborghiniOrange);
     const [loading, setLoading] = useState(false);
 
     const handelColorChange = (src) => {
