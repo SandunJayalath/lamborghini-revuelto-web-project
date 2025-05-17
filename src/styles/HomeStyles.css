@@ -402,6 +402,13 @@ div#gallery-card-alignment {
     }
 }
 
+@media (max-width: 660px) {
+    .view-more-box {
+        height: 80%;
+        overflow-y: auto;
+    }
+}
+
 .view-more-box img{
     max-width: 700px;
     width: 100%;

@@ -138,6 +138,9 @@ div#speedometer-icon {
     max-height: 400px;
     animation: imageChanging 2s ease-in-out;
     transition: imageChanging 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes imageChanging {
