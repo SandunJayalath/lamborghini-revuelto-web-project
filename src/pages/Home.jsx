@@ -267,7 +267,7 @@ function Home () {
                         <h4 className="fs-lg-1 fs-xl-1 fs-6"><strong>Explore The Full Specs</strong></h4>
                     </Link>
                     <div className="row" style={{width: "5px", height: "100px", backgroundColor: "rgb(63, 63, 63)"}}></div>
-                    <Link id="cta-anchor-tags" className="d-flex text-center" tp="/ContactPage">
+                    <Link id="cta-anchor-tags" className="d-flex text-center" to="/ContactPage">
                         <Headset style={{width: "100px", height: "auto"}}/>
                         <h4 className="fs-lg-1  fs-6"><strong>Contact Us</strong></h4>
                     </Link>

@@ -38,6 +38,11 @@
     background-image:  linear-gradient(to right, rgb(0, 119, 255), rgb(2, 37, 150));;
 }
 
+.input-forms:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgb(0, 47, 255);
+}
+
 .inquiry-button {
     padding: 5px 10px;
 }
@@ -57,20 +62,27 @@
 }
 
 .sent-message {
-    background-color: rgb(44, 44, 44);
+    background-image: linear-gradient(to bottom right, #1a1a1a, #0d0d0d);
     color: white;
     font-weight: bold;
     text-align: center;
-    width: 350px;
+    max-width: 400px;
     padding: 10px 10px;
     position: fixed;
     right: 50px;
     bottom: 50px;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 1rem;;
     z-index: 20000;
     animation: fadeInOut 4s forwards;
-    border: 2px solid rgb(56, 56, 56);
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.sent-message div#icon {
+    font-size: 2rem;
+  color: #00ff88;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 650px) {

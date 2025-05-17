@@ -110,7 +110,9 @@ function ContactPage() {
                         <>
                         <div className="sent-message">
                             <hr/>
-                            <p>Message sent!</p>
+                            <div id="icon">✅</div>
+                            <h2>Message sent!</h2>
+                            <p>Thank you for reaching out. We'll get back to you shortly.</p>
                             <hr />
                         </div>
                         </>}

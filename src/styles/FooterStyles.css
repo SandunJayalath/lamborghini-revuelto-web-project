@@ -1,12 +1,10 @@
 
 div#the-footer {
-    background: linear-gradient(to right,#00142b, #033af0, #000000);
+    background: linear-gradient(to bottom, rgb(8, 5, 56), #033af0, #000000);
     background-size: 600% 600%;
     min-height: 400px;
     position: sticky;
     color: white;
-    animation: changing-color 5s infinite ease;
-    
     display: flex;
     justify-content: center;
     align-items: center;

@@ -85,7 +85,7 @@ div#reserve-form h6{
 }
 
 div#successful-message-box {
-    background-color:  rgba(0, 0, 0, 0.85);
+    background-color:  rgba(0, 0, 0, 0.918);
     color: white;
     display: flex;
     position: fixed;
