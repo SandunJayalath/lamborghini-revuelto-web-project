@@ -58,7 +58,7 @@ function AboutPage() {
 
         <div className="row ">
             <div className="col-12 col-md-12 col-lg-6 col-xl-6 ">
-                <div className="d-flex justify-content-center align-items=center p-3 ps-5" id="descript-card" style={{flexDirection: "column", borderRadius: "10px",  fontFamily: "Arial, sans-serif"}}>
+                <div className="d-flex justify-content-center align-items=center p-3 ps-4 ps-md-5 ps-lg-5 ps-xl-5" id="descript-card" style={{flexDirection: "column", borderRadius: "10px",  fontFamily: "Arial, sans-serif"}}>
                     <p className="pt-2">✅ The Revuelto marks the birth of a new chapter — a bold evolution rooted in Lamborghini's relentless pursuit of excellence.</p>
                         <div style={{width: "100%", height: "2px", backgroundColor: "rgb(6, 73, 15)"}}></div>
                     <p className="pt-3">✅ Drawing inspiration from Formula E technologies, our hybrid V12 machine embodies the fusion of sustainable power and motorsport-grade engineering.</p>
