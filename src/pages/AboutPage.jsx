@@ -27,12 +27,14 @@ import Sophia from '../assets/Sophia Riedel.jpg';
 
 function AboutPage() {
 
-    // Switching the Themes
-    const [theme, setTheme] = useState('light')
+    // For switching the themes
 
-    useEffect (() => {
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+    useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
-    }, [theme])
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     const toggleTheme = () => {
         setTheme(prev => (prev === 'light' ? 'dark' : 'light'))

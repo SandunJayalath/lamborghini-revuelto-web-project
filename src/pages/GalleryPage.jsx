@@ -29,7 +29,18 @@ import image12 from '../assets/Gallery Images/Image12.jpg'
 
 function GalleryPage () {
 
-    const [theme, setTheme] = useState('light')
+    // For switching the themes
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
+    }
 
     const images = [
         {id: 1, category: "Exterior", title: "lamborghini Rvuelto driving through", image: image1},
@@ -52,14 +63,6 @@ function GalleryPage () {
     // Filtering 
     const filterdImages = filter === 'All'
         ? images : images.filter((img) => img.category === filter);
-
-    useEffect (() => {
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [theme])
-
-    const toggleTheme = () => {
-        setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
-    }
 
     return(
         <>

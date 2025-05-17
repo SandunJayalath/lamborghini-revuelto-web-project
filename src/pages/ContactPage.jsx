@@ -26,11 +26,14 @@ import lamboLogo from '../assets/lambo-logo.png';
 
 function ContactPage() {
 
-    const [theme, setTheme] = useState('light')
+    // For switching the themes
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
     useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme)
-    }, [theme])
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     const toggleTheme = () => {
         setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
@@ -115,7 +118,7 @@ function ContactPage() {
 
                     </div>
 
-                    <div className="d-flex justify-content-center align-items-center ps-4 gap-3 mt-sm-4 mt-4 mt-md-0 mt-lg-0 mt-xl-0" style={{ flexDirection: "column" }}>
+                    <div className="d-flex justify-content-center align-items-center ps-0 ps-md-4 ps-lg-4 ps-xl-4 gap-3 mt-sm-4 mt-4 mt-md-0 mt-lg-0 mt-xl-0" style={{ flexDirection: "column" }}>
                         <h4 style={{ fontFamily: "Tilt Neon", color: "var(--paragraph-color)" }}>Make sure that, all the information that you have given are correct before sending. We will give a reply soon</h4>
                         <button type="submit" className="sending-button">Send The Message<Send style={{ marginLeft: "6px", width: "30px" }} /></button>
                     </div>

@@ -23,7 +23,7 @@ function Paragraphs (props) {
 
     return (
         <>
-        <div className=" paragraphs" style={{fontFamily: "sans-serif", fontWeight: "semi-bold", color: "var(--paragraph-color)"}}>
+        <div className="paragraphs" style={{fontFamily: "sans-serif", fontWeight: "semi-bold", color: "var(--paragraph-color)"}}>
             <p style={textStyle}><strong>{props.paragraph}</strong></p>
         </div>
         </>

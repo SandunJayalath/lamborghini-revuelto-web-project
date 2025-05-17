@@ -45,11 +45,14 @@ import backgroundImage from '../assets/2.jpeg';
 
 function DetailPage () {
 
-    const [theme, setTheme] = useState('light')
+    // For switching the themes
 
-    useEffect (() => {
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+    useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
-    }, [theme])
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     const toggleTheme = () => {
         setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
@@ -68,7 +71,7 @@ function DetailPage () {
         return () => observer.disconnect();
         }, []);
 
-    // Color Changing & Image Changing Section
+    // Image Changing Section
 
     const [selectedCar, setSelectedCar] = useState(lamborghiniOrange);
     const [loading, setLoading] = useState(false);
