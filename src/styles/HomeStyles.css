@@ -183,6 +183,18 @@ div#card:hover {
     }
 }
 
+@media (max-width: 650px) {
+    .main-topic {
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+    .paragraphs {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
 /* Scroll Joining Effect Styles */
 
 .scroll-section {
@@ -218,9 +230,9 @@ div#card:hover {
 }
 
 @media (max-width: 970px) {
-div#image-next-texts {
-    margin-bottom: 40px;
-}   
+    div#image-next-texts {
+        margin-bottom: 40px;
+    }   
 }
 
 /* Button Styles */

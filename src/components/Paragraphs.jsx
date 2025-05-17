@@ -18,7 +18,7 @@ function Paragraphs (props) {
    const paragraphLength = props.paragraph.length;
 
    const textStyle = {
-    textAlign: isSmallScreen && paragraphLength > 70 ? "left" : "center",
+    textAlign: isSmallScreen && paragraphLength > 80 ? "left" : "center",
    }
 
     return (
