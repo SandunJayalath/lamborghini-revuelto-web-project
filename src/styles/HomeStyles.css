@@ -404,8 +404,10 @@ div#gallery-card-alignment {
 
 @media (max-width: 660px) {
     .view-more-box {
+        justify-content: flex-start;
         height: 80%;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
