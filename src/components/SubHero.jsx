@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 
 function SubHero({backgroundImage, heading, paragraph, button, buttonPath}) {
 
@@ -13,9 +14,9 @@ function SubHero({backgroundImage, heading, paragraph, button, buttonPath}) {
                 <h1>{heading}</h1>
                 <h4>{paragraph}</h4>
                 <div className="d-flex gap-4 cta-buttons">
-                    <a href={buttonPath}>
+                    <Link to={buttonPath}>
                         <button>{button}</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             </div>

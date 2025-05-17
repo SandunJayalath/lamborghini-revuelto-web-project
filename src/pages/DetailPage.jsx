@@ -125,7 +125,8 @@ function DetailPage () {
             backgroundImage={backgroundImage}
             heading="Unleash the Power of Precision"
             paragraph="Experience the perfect blend of performance, design, and innovation. Dive into the details of your dream ride — crafted to turn heads and built to dominate every road."
-            button="Explore Our Legacy"/>
+            button="Explore Our Legacy"
+            buttonPath="/AboutPage"/>
         
         <div className="container-lg mt-5 mb-5">        
         <div className='performance-grid-container'>

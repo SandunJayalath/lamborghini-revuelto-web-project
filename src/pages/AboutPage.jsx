@@ -49,7 +49,7 @@ function AboutPage() {
             heading="Crafted with Purpose. Designed for the Future."
             paragraph="Discover the story, vision, and legacy behind the Lamborghini Revuelto — where iconic design meets hybrid innovation."
             button="Explore Our Masterpiece"
-            buttonPath="./DetailPage"/>
+            buttonPath="/DetailPage"/>
 
         <div className="container-lg mb-5 d-flex justify-content-center" style={{flexDirection: "column", alignItems: "center"}}>
             <MainTopic title="Our Legacy"/>
