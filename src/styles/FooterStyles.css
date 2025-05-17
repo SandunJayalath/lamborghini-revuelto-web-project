@@ -71,7 +71,7 @@ div#the-footer p{
 
 .policy-window::-webkit-scrollbar {
     background-color: #505050;
-    width: 7px;
+    width: 3px;
     border-radius: 30px;
 }
 

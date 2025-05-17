@@ -474,6 +474,10 @@ h4#drive-mode4{
     animation-delay: 12s;
 }
 
+.gear-container {
+    z-index: 0;
+}
+
 @media (max-width: 650px) {
     .gear-container {
         width: 90%;
