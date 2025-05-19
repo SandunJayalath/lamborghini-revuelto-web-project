@@ -176,10 +176,15 @@ div#speedometer-icon {
     border: 5px solid #3498db;
     border-top: 5px solid transparent;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 1s ease-in-out infinite;
 }
     @keyframes spin {
-    to { transform: rotate(360deg); }
+    from {
+         transform: rotate(0deg) 
+    }
+    to {
+         transform: rotate(360deg)
+    }
 }
 
 .color-circles {
