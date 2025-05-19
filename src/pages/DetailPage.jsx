@@ -179,9 +179,9 @@ function DetailPage () {
                 <MainTopic title="Configurator Preview"/>
                 <Paragraphs paragraph="Personalize your Revuelto — color, rims, interior"/>
         
-            <div className="row d-flex" style={{marginTop: "40px", width: "100%"}}>
-                <div className="col-12 col-md-12 col-lg-6 col-xl-6 d-flex  align-items-center" id="color-changing-image">
-                    <div className="image-wrapper d-flex align-items-center" id="color-changing-image">
+            <div className="row d-flex justify-content-center" style={{marginTop: "40px", width: "100%"}}>
+                <div className="col-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center">
+                    <div className="image-wrapper  d-flex align-items-center justify-content-center" id="color-changing-image">
                     {loading && (
                         <div className="loader">
                             <div className="spinner"></div>

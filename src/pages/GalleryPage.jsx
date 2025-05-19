@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 // Importing the Components
 import NavBar from "../components/NavBar"
@@ -28,6 +28,10 @@ import image11 from '../assets/Gallery Images/Image11.png'
 import image12 from '../assets/Gallery Images/Image12.jpg'
 
 function GalleryPage () {
+
+    const imageStyles = {
+        backgroundImage: `url(${backgroundImage})`,
+    }
 
     // For switching the themes
 
@@ -67,13 +71,20 @@ function GalleryPage () {
     return(
         <>
         <NavBar toggleTheme={toggleTheme} currentTheme={theme}/>
-        
-        <SubHero 
-            backgroundImage={backgroundImage}
-            heading="Revuelto Gallery"
-            paragraph="Explore the artistry, the innovation, and the adrenaline in stunning detail. The Revuelto comes alive through the lens."
-            button="Download Media Kit"
-            buttonPath="#download"/>
+      
+        <div className="container-fluid sub-hero" style={imageStyles}>
+            <div className="container-lg p-4">
+            <div className="d-flex align-items-left sub-hero-content" style={{flexDirection: "column"}}>
+                <h1>Revuelto Gallery</h1>
+                <h4>Explore the artistry, the innovation, and the adrenaline in stunning detail. The Revuelto comes alive through the lens.</h4>
+                <div className="d-flex gap-4 cta-buttons">
+                    <Link to="download" smooth={true} duration={500}>
+                        <button>Download Media Kit</button>
+                    </Link>
+                </div>
+            </div>
+            </div>
+        </div>
 
         <div id="exit" className="container-lg">
             <MainTopic title="Our Image Gallery"/>
