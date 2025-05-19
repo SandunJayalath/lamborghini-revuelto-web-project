@@ -178,7 +178,8 @@ function DetailPage () {
             <div className="container-fluid" style={{maxWidth: "1700px"}}>
                 <MainTopic title="Configurator Preview"/>
                 <Paragraphs paragraph="Personalize your Revuelto — color, rims, interior"/>
-        
+
+            <div className="container d-flex justify-content-center" style={{maxWidth: "1400px"}}>
             <div className="row d-flex justify-content-center" style={{marginTop: "40px", width: "100%"}}>
                 <div className="col-12 col-md-12 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center">
                     <div className="image-wrapper d-flex align-items-center justify-content-center" id="color-changing-image">
@@ -246,6 +247,7 @@ function DetailPage () {
                     </div>
 
                     </div>
+               </div>
                </div>
                </div>
                </div>
