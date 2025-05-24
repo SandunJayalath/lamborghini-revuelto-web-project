@@ -311,10 +311,18 @@ div#interior-tag {
     transition: 0.3s;
 }
 
+@media (min-width: 1200px) {
+    div#interior-tag {
+        padding: 20px 30px;
+        border-radius: 30px;
+    } 
+}
+
 div#interior-tag:hover {
     background-color: rgb(248, 100, 32);
-    transform: scale(1.02);
+    transform: translateY(-7px);
     box-shadow: 0 0 20px black;
+    cursor: default;
 }
 
 div#grid-feature-card {
