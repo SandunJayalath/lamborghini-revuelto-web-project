@@ -13,7 +13,7 @@ import { DropDown, DropList } from '../components/DropDownComponent';
 import TheFooter from '../components/TheFooter';
 
 //  Importing the icons in used
-import { CircleGauge, SprayCan } from 'lucide-react';
+import { Archive, CircleGauge, SprayCan } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { BatteryCharging } from 'lucide-react';
 import { RefreshCw } from 'lucide-react';
@@ -117,6 +117,17 @@ function DetailPage () {
     // Creating The Interior Texts
     const [intrText, setIntrText] = useState("Interior")
 
+    // For the tab container (Driving Modes container)
+    const tabs = [
+        {id: "tab1", drivingMode: 'STRADA Mode', content: 'Strada mode offers a comfortable, relaxed drive with softened suspension and a calm throttle response — perfect for everyday journeys without losing Lamborghini’s edge.'},
+        {id: "tab2", drivingMode: 'SPORT Mode', content: 'In Sport mode, the Revuelto sharpens up. Faster shifts, a louder exhaust, and a more playful chassis make every drive thrilling and full of character.'},
+        {id: "tab3", drivingMode: 'CORSA Mode', content: 'Corsa mode unlocks maximum performance. With precise handling and full manual control, it’s built for the track and those who demand pure adrenaline.'},
+        {id: "tab4", drivingMode: 'RECHARGE Mode', content: 'Recharge mode optimizes energy recovery, recharging the hybrid system while delivering a smooth, efficient drive through city streets or cool-down laps.'},
+    ]
+
+    const [activeTab, setActiveTab] = useState('tab1');
+    const currentTab = tabs.find(tab => tab.id === activeTab);
+
     return (
         <>
         <NavBar toggleTheme={toggleTheme} currentTheme={theme}/>
@@ -214,9 +225,8 @@ function DetailPage () {
                     <div onClick={() => handelColorChange(babyBlue)} className='color-circles' style={{backgroundColor: "#8FD8F8"}}></div>
                 </div>
                 </div>
-
                    
-                   <div style={{display: "flex", gap: "30px", flexDirection: "row", width: "100%", justifyContent: "center"}}>
+                <div style={{display: "flex", gap: "30px", flexDirection: "row", width: "100%", justifyContent: "center"}}>
 
                     <div className="dropdown">
                         <button className="dropdown-btn">{rimText}<ChevronDown/></button>
@@ -374,46 +384,24 @@ function DetailPage () {
 
         <div className="container mt-5">
             <MainTopic title="Check Out Various Driving Modes"/>
-        <div className="row" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
         
-        <div className="col-12 col-md-6 col-lg-4 col-xl-4 mb-xs-3 m-lg-0 d-flex justify-content-center" style={{height: "100%", alignItems: "center"}}>
+        <div className="row  tab-container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4  tab-buttons">
+                {tabs.map(tab => (
+                    <button 
+                        key={tab.id}
+                        className={`tab-button ${activeTab === tab.id ? `active` : ''}`}
+                        onClick={() => setActiveTab(tab.id)}
+                    >{tab.drivingMode}</button>
+                ))}
+            </div>
 
-            <div className='driving-modes-circle d-flex justify-content-center align-items-center' style={{flexDirection: "column"}}> 
-                <h4 id="drive-mode1" className='driving-modes'>Strada mode</h4>
-                <h4 id="drive-mode2" className='driving-modes'>Sport mode</h4>
-                <h4 id="drive-mode3" className='driving-modes'>Corsa mode</h4>
-                <h4 id="drive-mode4" className='driving-modes'>Recharge mode</h4>
-                <div  className=" d-flex justify-content-center align-items-center underline"></div>
+            <div className="col-12 col-md-8 col-lg-8 col-xl-8 gear-container">
+                <h2>{currentTab.drivingMode}</h2>
+                <p>{currentTab.content}</p>
             </div>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-8 col-xl-8 mt-3 m-lg-0 mb-md-0 pb-md-0 gear-container" style={{backgroundColor: "rgb(29, 29, 29)", borderRadius: "10px", display: "flex", flexDirection: "column", justifyContent: "center",  position: 'relative', padding: "0px 0px"}}>
-            <div  ref={containerRef} data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" className="scrollspy-example p-3 rounded overflow-auto driving-modes-container" tabIndex="0" style={{ display: "flex", flexDirection: "column", color: "white"}}>
-                                
-            <button onClick={handleScroll} style={{backgroundColor: "rgb(2, 2, 2)", borderRadius: "50%", position: "absolute", right: "30px", bottom: "20px", color: "white", fontSize: "20px", width: "40px", height: "40px", border: "2px solid gray", zIndex: "5"}}><ChevronDown/></button>
-
-           <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", minHeight: "200px", textAlign: "center"}}>
-                <h4 className='driving-mode' id="list-item-1"><strong>Strada Mode</strong> – Smooth and Refined</h4>
-                <p>Strada mode offers a comfortable, relaxed drive with softened suspension and a calm throttle response — perfect for everyday journeys without losing Lamborghini’s edge.</p>
-            </div>
-
-            <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", minHeight: "200px", textAlign: "center"}}>
-                <h4  className='driving-mode' id="list-item-2"><strong>Sport Mode</strong> – Energetic and Bold</h4>
-                <p>In Sport mode, the Revuelto sharpens up. Faster shifts, a louder exhaust, and a more playful chassis make every drive thrilling and full of character.</p>
-            </div>
-
-            <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", minHeight: "200px", textAlign: "center"}}>
-                <h4  className='driving-mode' id="list-item-3"><strong>Corsa Mode</strong> – Pure Racing Spirit</h4>
-                <p>Corsa mode unlocks maximum performance. With precise handling and full manual control, it’s built for the track and those who demand pure adrenaline.</p>
-            </div>
-
-            <div style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", minHeight: "200px", textAlign: "center"}}>
-                <h4  className='driving-mode' id="list-item-4"><strong>Recharge Mode</strong> – Smart Efficiency</h4>
-                <p>Recharge mode optimizes energy recovery, recharging the hybrid system while delivering a smooth, efficient drive through city streets or cool-down laps.</p>
-            </div>
-            </div>
-        </div>
-        </div>
         </div>
 
         <div className="mt-4 text-center">
