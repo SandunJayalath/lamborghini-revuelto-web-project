@@ -466,6 +466,7 @@ div#tech-card:hover {
     border: 2px solid rgba(128, 128, 128, 0.452);
     border-left: none;
     height: 280px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 @media (max-width: 650px) {
