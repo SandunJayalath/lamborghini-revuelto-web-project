@@ -22,7 +22,6 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(223, 155, 30);
     text-align: left;
-    animation: header-topic 2s infinite ease-in-out;
 }
 
 .sub-hero h4 {

@@ -26,6 +26,7 @@ import image9 from '../assets/Gallery Images/Image9.jpg'
 import image10 from '../assets/Gallery Images/Image10.jpg'
 import image11 from '../assets/Gallery Images/Image11.png'
 import image12 from '../assets/Gallery Images/Image12.jpg'
+import Quotes from '../assets/quotesIcon.png';
 
 function GalleryPage () {
 
@@ -111,13 +112,11 @@ function GalleryPage () {
             </a>
         </div>
 
-        <div className="container d-flex justify-content-center align-items-center">
-        <div className="text-center d-flex justify-content-center mt-4 p-4 quote-animation" style={{ width: "100%", padding: "5px", backgroundImage: "linear-gradient(to bottom,rgb(0, 0, 0),rgb(4, 21, 97))", borderRadius: "20px", flexDirection: "column"}}>
-            <div className="d-flex" style={{flexDirection: "row", fontFamily: "Arial, Inter, sans-serif", color: "white", WebkitTextStrokeWidth: "1px", WebkitTextStrokeColor: "rgb(241, 241, 241)",justifyContent: "center"}}>
-                <Quote style={{transform: "rotate(180deg"}}/><h2 className="mx-3"> <strong>Every moment captured. Every angle perfected</strong> </h2><Quote/>
-            </div>
-        </div> 
-        </div>
+        <div className="text-center mt-1 mt-lg-5 mt-xl-5 d-flex gap-3 justify-content-center" style={{fontFamily: "Arial, Inter, sans-serif", fontWeight: "400", width: "100%", flexDirection: "column", maxWidth: "800px", justifySelf: "center"}}>
+            <img src={Quotes} alt="" style={{textAlign: "left", width: "50px", height: "auto"}}/>
+            <h2> <strong>Every moment captured. Every angle perfected </strong> </h2>
+            <img src={Quotes} alt="" style={{alignSelf: "flex-end", width: "50px", height: "auto", transform: "rotate(180deg)"}}/>
+        </div>    
 
         <TheFooter/>
         </>

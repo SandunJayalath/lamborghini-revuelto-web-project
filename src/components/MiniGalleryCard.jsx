@@ -9,7 +9,7 @@ function MiniGalleryCard (props) {
 
     return(
         <>
-        <div id="mini-gallery-card" className="d-flex justify-content-center align-items-start p-3 key-feature-card" style={{maxWidth: "300px", minWidth: "300px"}}>
+        <div id="mini-gallery-card" className="d-flex align-items-start p-3 key-feature-card" style={{maxWidth: "300px", minWidth: "300px"}}>
                 <div className="d-flex justify-content-center align-items-center" style={{height: "150px"}}>
                     <img src={props.image} alt="" className="key-feature-image"/>
                 </div>

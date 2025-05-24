@@ -345,6 +345,7 @@ div#mini-gallery-card {
     border-radius: 10px;
     transition: 0.3s;
     -webkit-text-fill-color: white;
+    justify-content: space-around;
 }
 div#mini-gallery-card:hover {
     transform: scale(1.01);

@@ -24,6 +24,7 @@ import Leonardo from '../assets/Leonardo Bianchi.png';
 import Amara from '../assets/Amara Collins.png';
 import Luca from '../assets/Luca Ferrero.jpg';
 import Sophia from '../assets/Sophia Riedel.jpg';
+import Quotes from '../assets/quotesIcon.png';
 
 function AboutPage() {
 
@@ -71,8 +72,10 @@ function AboutPage() {
                 <img src="https://th.bing.com/th/id/OIP.F2qLZnol9A_i6sVCFtsMHAHaEw?rs=1&pid=ImgDetMain" alt=""/>
             </div>
         </div>    
-        <div className="text-center mt-1 mt-lg-5 mt-xl-5 d-flex justify-content-center" style={{fontFamily: "Arial, Inter, sans-serif", fontWeight: "400", width: "100%", backgroundColor: "rgb(0, 74, 212)", padding: "20px",  borderRadius: "20px", border: "2px solid rgb(1, 43, 90)", color: "white"}}>
-                <h2> <strong>" We Don't Follow Legacy, We Create It "</strong> </h2>
+        <div className="text-center mt-1 mt-lg-5 mt-xl-5 d-flex gap-3 justify-content-center" style={{fontFamily: "Arial, Inter, sans-serif", fontWeight: "400", width: "100%", flexDirection: "column", maxWidth: "700px"}}>
+                <img src={Quotes} alt="" style={{textAlign: "left", width: "50px", height: "auto"}}/>
+                <h2> <strong> We Don't Follow Legacy, We Create It </strong> </h2>
+                <img src={Quotes} alt="" style={{alignSelf: "flex-end", width: "50px", height: "auto", transform: "rotate(180deg)"}}/>
             </div>    
         </div>
 
@@ -253,3 +256,4 @@ function AboutPage() {
     );
 }
 export default AboutPage;
+
