@@ -472,6 +472,7 @@ div#tech-card:hover {
 @media (max-width: 650px) {
     .gear-container {
         padding-left: 20px;
+        border-radius: 0px 0px 10px 10px;
         border-left: 2px solid rgba(128, 128, 128, 0.452);
         border-top: none;
     }
